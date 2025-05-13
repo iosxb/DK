@@ -39,13 +39,8 @@
 
 - (void)checkFriendsEnd:(NSNotification *)notify{
 
-    NSNumber *successNum = notify.userInfo[@"success"];
-if ([successNum isKindOfClass:[NSNumber class]]) {
-    Boolean isSuccess = [successNum boolValue];
-} else {
-    // 处理默认值或错误情况
-    Boolean isSuccess = NO; 
-}
+//开始
+Boolean isSuccess = [notify.userInfo[@"success"] boolValue];
 
     if (isSuccess){
         [m_MMLoadingView stopLoadingAndShowOK:@"检测成功"];

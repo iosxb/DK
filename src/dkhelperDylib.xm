@@ -12,7 +12,6 @@
 #import <UIKit/UIKit.h>
 #import "DKHelper.h"
 #import "DKHelperSettingController.h"
-#import "NewSettingViewController.h"
 #import <substrate.h>
 #import <objc/runtime.h>
 

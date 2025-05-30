@@ -12,6 +12,7 @@
 #import <UIKit/UIKit.h>
 #import "DKHelper.h"
 #import "DKHelperSettingController.h"
+#import "NewSettingViewController.h"
 #import <substrate.h>
 #import <objc/runtime.h>
 
@@ -471,7 +472,7 @@
     if (DKHelperConfig.timeLineForwardEnable){
         self.frame = CGRectOffset(CGRectInset(self.frame, self.frame.size.width / -4, 0),self.frame.size.width / -4,0);
         self.m_shareBtn.frame = CGRectOffset(self.m_likeBtn.frame, self.m_likeBtn.frame.size.width * 2, 0);
-        self.m_lineView2.frame = CGRectOffset(MSHookIvar<UIImageView *>(self, "m_lineView").frame, [self buttonWidth:self.m_likeBtn], 0);
+        self.m_lineView2.frame = CGRectOffset(GET_IVAR(UIImageView *, self, "m_lineView").frame, [self buttonWidth:self.m_likeBtn], 0);
     }
 }
 

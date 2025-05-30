@@ -12,13 +12,6 @@
 #import <UIKit/UIKit.h>
 #import "DKHelper.h"
 #import "DKHelperSettingController.h"
-#import <substrate.h>
-#import <objc/runtime.h>
-
-#define GET_IVAR(type, obj, name) ({ \
-    Ivar iv = class_getInstanceVariable([obj class], name); \
-    (type)object_getIvar(obj, iv); \
-})
 
 %hook MMServiceCenter
 %new
